@@ -24,4 +24,12 @@ print("data inserted")
 
 for i in col.find({"mark":{"$gt":90}},{"name":1,"_id":0,"grade":1}):
     print(i["name"]["fname"],i["name"]["lname"],"- grade",i["grade"])
-    
+
+for i in col.find({"mark":{"$gt":80,"$lt":90}}):
+    print(i)
+
+for i in col.find({"name.fname":{"$regex":"^A"}}):
+    print(i)
+
+for i in col.find({"address.city":{"$nin":["Kollam","Thiruvananthapuram"]}}):
+    print(i)
