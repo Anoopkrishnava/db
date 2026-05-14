@@ -514,7 +514,9 @@ data=[{
 # for i in col.find({"gender":"female","address.city":{"$in":["Kollam","Thiruvananthapuram"]}}):
 #     print(i["name"]["fname"],i["name"]["lname"])
 
-
+#count students in MCA
+# count = col.count_documents({"course": "MCA"})
+# print(count)
 
 
 # if col.delete_many({}):
