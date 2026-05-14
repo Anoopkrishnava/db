@@ -1,0 +1,27 @@
+2.Write a procedure to display the grade for a mark.
+
+Procedure
+
+CREATE PROCEDURE `grade`(in g int)
+BEGIN
+declare des varchar(50);
+if g > 90
+then
+set des="Grade is A";
+elseif g > 80
+then
+set des="Grade is B";
+elseif g > 70
+then
+set des="Grade is C";
+elseif g > 60
+then
+set des="Grade is D";
+else
+set des="Grade is E";
+end if;
+select g as Marks,des as Grade;
+END
+
+SQL Query
+call grade(87);

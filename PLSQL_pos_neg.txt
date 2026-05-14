@@ -1,0 +1,20 @@
+Write a procedure to check if a number is positive, negative or zero.
+Procedure
+
+CREATE PROCEDURE `pos_neg_zero`(in num int)
+BEGIN
+declare r varchar(10);
+if num >0
+then
+set r= "positive";
+elseif num<0
+then
+set r= "negative";
+else
+set r= "zero";
+end if;
+select num as Number, r as Result;
+END
+
+SQL Query
+call pos_neg_zero (-7);
